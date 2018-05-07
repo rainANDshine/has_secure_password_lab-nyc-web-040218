@@ -7,7 +7,8 @@ class UsersController < ApplicationController
     if user_params[:password] != user_params[:password_confirmation]
       redirect_to new_path
     else
-      User.create(user_params)
+      @user = User.create(user_params)
+      session[:user_id] = @user.id
       redirect_to login_path
     end
   end
