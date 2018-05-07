@@ -9,6 +9,6 @@ class SessionsController < ApplicationController
       redirect_to welcome_path
     else
       redirect_to login_path
-    end 
+    end
   end
 end
