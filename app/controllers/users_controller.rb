@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    byebug
     if user_params[:password] != user_params[:password_confirmation]
       redirect_to new_path
     else
