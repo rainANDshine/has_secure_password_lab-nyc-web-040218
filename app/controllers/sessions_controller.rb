@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 
    session[:user_id] = user.id
 
-   @user = user
+   #@user = user
 
    redirect_to controller: 'welcome', action: 'show'
  end
