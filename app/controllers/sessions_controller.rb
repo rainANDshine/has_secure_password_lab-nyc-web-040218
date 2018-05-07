@@ -14,9 +14,9 @@ class SessionsController < ApplicationController
   # end
 
   def create
-   user = User.find_by(name: params[:user][:name])
+   user = User.find_by(name: params[:name])
 
-   user = user.try(:authenticate, params[:user][:password])
+   user = user.try(:authenticate, params[:password])
 
    return redirect_to(controller: 'sessions', action: 'new') unless user
 
