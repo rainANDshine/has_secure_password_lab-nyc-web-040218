@@ -7,7 +7,6 @@ class UsersController < ApplicationController
       redirect_to new_path
     else
       @user = User.create(user_params)
-      session[:user_name] = @user.name
       session[:user_id] = @user.id
       redirect_to welcome_path
     end
