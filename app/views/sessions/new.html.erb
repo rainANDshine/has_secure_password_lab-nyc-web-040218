@@ -1,0 +1,6 @@
+<h2>User login:</h3>
+<%= form_tag login_path do %>
+  Username: <%= text_field_tag :name %>
+  Password: <%= password_field_tag :password %>
+  <%= submit_tag 'Submit' %>
+<% end %>
