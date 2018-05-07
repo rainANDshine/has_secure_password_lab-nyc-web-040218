@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(name: params[:name])
     if @user && @user.authenticate(params[:password])
-      byebug
       session[:user_id] = @user.id
       session[:user_name] = @user.name
       redirect_to welcome_path
