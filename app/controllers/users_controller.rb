@@ -5,7 +5,6 @@ class UsersController < ApplicationController
 
   def create
     User.create(user_params)
-    byebug
     redirect_to login_path
   end
 
