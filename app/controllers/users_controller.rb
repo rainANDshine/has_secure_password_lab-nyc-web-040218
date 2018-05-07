@@ -4,8 +4,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    User.create(user_params)
-    redirect_to login_path
+    if params[:password] != params[:password_confirmation]
+      redirect_to new_path
+    else
+      User.create(user_params)
+      redirect_to login_path
+    end
   end
 
   private
